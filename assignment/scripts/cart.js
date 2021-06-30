@@ -15,6 +15,10 @@ function listItems(){
   }
 }
 
+function empty(){
+  basket = [];
+}
+
 //Test addItem function
 console.log(basket);
 addItem('Pants');
@@ -24,3 +28,7 @@ console.log(basket);
 
 //Test for listItem
 listItems();
+
+//Test for empty
+empty();
+console.log(basket);
