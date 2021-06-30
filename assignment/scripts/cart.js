@@ -9,9 +9,18 @@ function addItem(item){
   return true;
 }
 
+function listItems(){
+  for (let i = 0; i < basket.length; i++){
+    console.log(basket[i]);
+  }
+}
+
 //Test addItem function
 console.log(basket);
 addItem('Pants');
 addItem('Shoes');
 addItem('Jacket');
 console.log(basket);
+
+//Test for listItem
+listItems();
