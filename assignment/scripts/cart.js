@@ -3,6 +3,7 @@ console.log('***** Cart Functions *****');
 // We want to see how you are testing your code!!!
 
 let basket = [];
+const maxItems = 5;
 
 function addItem(item){
   basket.push(item);
@@ -19,6 +20,14 @@ function empty(){
   basket = [];
 }
 
+function isFull(){
+  if (basket.length < maxItems){
+    return false;
+  } else {
+    return true;
+  }
+}
+
 //Test addItem function
 console.log(basket);
 addItem('Pants');
@@ -28,6 +37,12 @@ console.log(basket);
 
 //Test for listItem
 listItems();
+
+//Test for isFull
+console.log('The cart is full:', isFull());
+addItem('Socks');
+addItem('Shirt');
+console.log('The cart is full:', isFull());
 
 //Test for empty
 empty();
