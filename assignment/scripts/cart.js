@@ -5,12 +5,11 @@ console.log('***** Cart Functions *****');
 let basket = [];
 const maxItems = 5;
 
+
 function addItem(item){
-  if (basket.length < maxItems){
+  while (isFull() === false){
     basket.push(item);
     return true;
-  } else {
-    console.log(`${item} could not be added. Cart is full`);
   }
 }
 
@@ -38,7 +37,7 @@ function removeItem(item){
     basket.splice(removedItem, 1);
     console.log('The item you removed is', item);
   } else {
-    console.log('Item not in cart');
+    console.log(`The item ${item} in not in the cart`);
   }
 }
 
