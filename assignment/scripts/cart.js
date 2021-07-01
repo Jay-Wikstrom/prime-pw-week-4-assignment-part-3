@@ -32,6 +32,16 @@ function isFull(){
   }
 }
 
+function removeItem(item){
+  const removedItem = basket.indexOf(item);
+  if (removedItem > -1){
+    basket.splice(removedItem, 1);
+    console.log('The item you removed is', item);
+  } else {
+    console.log('Null');
+  }
+}
+
 //Test addItem function
 console.log('Basket array is:', basket);
 addItem('Pants');
@@ -51,6 +61,10 @@ console.log('The cart is full:', isFull());
 //Test for if cart is full
 addItem('Sweater');
 listItems();
+
+//Test for removedItem
+removeItem('Winter Jacket');
+removeItem('Jacket');
 
 //Test for empty
 empty();
