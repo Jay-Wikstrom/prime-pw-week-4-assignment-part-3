@@ -6,13 +6,17 @@ let basket = [];
 const maxItems = 5;
 
 function addItem(item){
-  basket.push(item);
-  return true;
+  if (basket.length < maxItems){
+    basket.push(item);
+    return true;
+  } else {
+    console.log(`${item} could not be added. Cart is full`);
+  }
 }
 
 function listItems(){
   for (let i = 0; i < basket.length; i++){
-    console.log(basket[i]);
+    console.log('Item in my cart:', basket[i]);
   }
 }
 
@@ -29,11 +33,11 @@ function isFull(){
 }
 
 //Test addItem function
-console.log(basket);
+console.log('Basket array is:', basket);
 addItem('Pants');
 addItem('Shoes');
 addItem('Jacket');
-console.log(basket);
+console.log('Basket array is: ', basket);
 
 //Test for listItem
 listItems();
@@ -44,6 +48,10 @@ addItem('Socks');
 addItem('Shirt');
 console.log('The cart is full:', isFull());
 
+//Test for if cart is full
+addItem('Sweater');
+listItems();
+
 //Test for empty
 empty();
-console.log(basket);
+console.log('Basket array is:', basket);
