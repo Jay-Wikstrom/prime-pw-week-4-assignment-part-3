@@ -38,11 +38,12 @@ function removeItem(item){
     basket.splice(removedItem, 1);
     console.log('The item you removed is', item);
   } else {
-    console.log('Null');
+    console.log('Item not in cart');
   }
 }
 
 //Test addItem function
+console.log('***** Test for addItem function *****');
 console.log('Basket array is:', basket);
 addItem('Pants');
 addItem('Shoes');
@@ -50,22 +51,27 @@ addItem('Jacket');
 console.log('Basket array is: ', basket);
 
 //Test for listItem
+console.log('***** Test for listItems function *****');
 listItems();
 
 //Test for isFull
+console.log('***** Test for isFull function *****');
 console.log('The cart is full:', isFull());
 addItem('Socks');
 addItem('Shirt');
 console.log('The cart is full:', isFull());
 
 //Test for if cart is full
+console.log('***** Test for if cart is already full *****');
 addItem('Sweater');
 listItems();
 
 //Test for removedItem
+console.log('***** Test for removedItem function');
 removeItem('Winter Jacket');
 removeItem('Jacket');
 
 //Test for empty
+console.log('***** Test for empty function *****');
 empty();
 console.log('Basket array is:', basket);
